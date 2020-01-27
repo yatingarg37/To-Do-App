@@ -1,0 +1,27 @@
+<app-header></app-header>
+<mat-card>
+    <mat-form-field>
+      <input matInput placeholder="Title" type="text" [(ngModel)]="enterTitle">
+      
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Notes" rows="2" [(ngModel)]="enterNotes"></textarea>
+    </mat-form-field>
+    <mat-label>Select Priorty</mat-label>
+    <br>
+    <br>
+     <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle [(ngModel)]="enterPer">Low</mat-button-toggle>
+        <mat-button-toggle [(ngModel)]="enterPer">Medium</mat-button-toggle>
+        <mat-button-toggle [(ngModel)]="enterPer">High</mat-button-toggle>
+      </mat-button-toggle-group>
+      <br>
+      <br>
+    <div>
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="onAddToDO()">
+      Add</button></div>
+  </mat-card>
